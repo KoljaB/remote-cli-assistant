@@ -36,7 +36,7 @@ class OpenAIResponsesClient:
         self.base_url = (base_url or os.environ.get("OPENAI_BASE_URL") or "https://api.openai.com/v1").rstrip("/")
         self.timeout_seconds = timeout_seconds
         self.local_base_url = _is_local_base_url(self.base_url)
-        self.force_chat_completions = os.environ.get("INSTALL_ASSISTANT_FORCE_CHAT_COMPLETIONS", "").strip().lower() in {
+        self.force_chat_completions = os.environ.get("REMOTE_CLI_ASSISTANT_FORCE_CHAT_COMPLETIONS", "").strip().lower() in {
             "1",
             "true",
             "yes",

@@ -3,9 +3,9 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from install_assistant.controller import ChatAssistantConfig, ChatAssistantController
-from install_assistant.remote_control import run_remote_worker_server
-from install_assistant.worker import run_worker
+from remote_cli_core.controller import ChatAssistantConfig, ChatAssistantController
+from remote_cli_core.remote_control import run_remote_worker_server
+from remote_cli_core.worker import run_worker
 
 
 def parse_args() -> argparse.Namespace:

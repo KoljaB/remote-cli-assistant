@@ -77,4 +77,4 @@ Notes:
 - `OPENAI_API_KEY` is required when using OpenAI-hosted models.
 - `OPENAI_BASE_URL` or `--base-url` can point to LM Studio or another OpenAI-compatible local server.
 - `SEARXNG_BASE_URL` or `--search-api-url` enables self-hosted web research through SearXNG.
-- `INSTALL_ASSISTANT_FORCE_CHAT_COMPLETIONS=1` forces the local-server fallback to `/v1/chat/completions`.
+- `REMOTE_CLI_ASSISTANT_FORCE_CHAT_COMPLETIONS=1` forces the local-server fallback to `/v1/chat/completions`.
