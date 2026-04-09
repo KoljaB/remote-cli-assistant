@@ -20,7 +20,7 @@ class SessionPaths:
 
     @classmethod
     def create(cls) -> "SessionPaths":
-        root = Path(tempfile.mkdtemp(prefix="github-install-assistant-"))
+        root = Path(tempfile.mkdtemp(prefix="remote-cli-assistant-"))
         commands_dir = root / "commands"
         results_dir = root / "results"
         artifacts_dir = root / "artifacts"

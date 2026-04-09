@@ -11,7 +11,7 @@ from html.parser import HTMLParser
 
 
 DEFAULT_USER_AGENT = (
-    "github-install-assistant/1.0 (+https://github.com; local research helper)"
+    "remote-cli-assistant/1.0 (+https://github.com; local research helper)"
 )
 TEXTUAL_CONTENT_TYPES = (
     "text/",

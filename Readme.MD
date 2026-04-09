@@ -1,4 +1,4 @@
-`github_install_assistant.py` is now a general AI-controlled CLI assistant.
+`remote_cli_assistant.py` is a general AI-controlled remote CLI assistant.
 
 What it does:
 
@@ -36,9 +36,9 @@ Requirements:
 Controller usage:
 
 ```powershell
-python .\github_install_assistant.py
-python .\github_install_assistant.py "Inspect this repository and tell me how to run its tests." --execution-mode confirm
-python .\github_install_assistant.py --goal "Set up a Python venv, inspect the project, and get the dev server running." --execution-mode auto
+python .\remote_cli_assistant.py
+python .\remote_cli_assistant.py "Inspect this repository and tell me how to run its tests." --execution-mode confirm
+python .\remote_cli_assistant.py --goal "Set up a Python venv, inspect the project, and get the dev server running." --execution-mode auto
 ```
 
 LM Studio plus SearXNG:
@@ -47,7 +47,7 @@ LM Studio plus SearXNG:
 export OPENAI_BASE_URL="http://127.0.0.1:1234/v1"
 export SEARXNG_BASE_URL="http://127.0.0.1:8080"
 
-python github_install_assistant.py \
+python remote_cli_assistant.py \
   --planner-model openai/gpt-oss-20b \
   --loop-model openai/gpt-oss-20b \
   --research-backend searxng \
@@ -59,14 +59,14 @@ Remote worker setup:
 On the Linux machine that should host the visible CLI window:
 
 ```bash
-python github_install_assistant.py --worker-server --listen-host 0.0.0.0 --port 8765
+python remote_cli_assistant.py --worker-server --listen-host 0.0.0.0 --port 8765
 ```
 
 On the Windows machine where the user talks to the assistant:
 
 ```powershell
 $env:OPENAI_BASE_URL="http://127.0.0.1:1234/v1"
-python .\github_install_assistant.py --connect 192.168.1.50:8765 --execution-mode confirm
+python .\remote_cli_assistant.py --connect 192.168.1.50:8765 --execution-mode confirm
 ```
 
 Notes:
